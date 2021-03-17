@@ -1,0 +1,247 @@
+.container {
+  height: 500px;
+  border-bottom: 2px solid black;
+  position: relative;
+}
+
+.position {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+}
+
+.button {
+  border: 1px solid red;
+  display: inline-block;
+  color: red;
+  padding: 10px;
+  border-radius: 10px;
+}
+.button:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 2px red;
+  transform: scale(1.1);
+}
+
+.box-text {
+  display: inline-block;
+  color: aquamarine;
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.transform {
+  transition: transform 2s linear;
+}
+
+#checkbox:checked ~ .animate-move {
+  animation-play-state: running;
+}
+
+.animate-move {
+  animation-name: move;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes move {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.box__parent {
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text {
+  position: absolute;
+  top: calc(50% - 9px);
+  left: calc(50% - 9px);
+  z-index: 0;
+}
+
+.wrap {
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+}
+
+.wrap-red {
+  background-color: red;
+}
+
+.wrap-yellow {
+  background-color: yellow;
+}
+
+.wrap-blue {
+  background-color: blue;
+}
+
+.wrap-green {
+  background-color: green;
+}
+
+.box__parent:hover .wrap__animation {
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+}
+
+.left-red {
+  animation-name: left-red;
+}
+
+.left-blue {
+  animation-name: left-blue;
+}
+
+.right-yellow {
+  animation-name: right-yellow;
+}
+
+.right-green {
+  animation-name: right-green;
+}
+
+@keyframes left-red {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform-origin: top left;
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes left-blue {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform-origin: bottom left;
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes right-yellow {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform-origin: top right;
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes right-green {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform-origin: bottom right;
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.box__violet {
+  width: 300px;
+  height: 300px;
+  background-color: violet;
+  position: relative;
+}
+.box__blue {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.box__orange {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.box__animation {
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.animation-violet {
+  animation-name: violet;
+}
+
+@keyframes violet {
+  0% {
+    transform: rotate(0deg);
+    background-color: violet;
+  }
+  50% {
+    background-color: purple;
+  }
+  100% {
+    background-color: darkblue;
+    transform: rotate(360deg);
+  }
+}
+.animation-blue {
+  animation-name: blue;
+}
+
+@keyframes blue {
+  0% {
+    transform: rotate(0deg);
+    background-color: blue;
+  }
+  50% {
+    background-color: #41d37e;
+  }
+  100% {
+    background-color: #c75a87;
+    transform: rotate(360deg);
+  }
+}
+.animation-orange {
+  animation-name: orange;
+}
+
+@keyframes orange {
+  0% {
+    transform: rotate(0deg);
+    background-color: orange;
+  }
+  50% {
+    background-color: #f300be;
+  }
+  100% {
+    background-color: #2ef008;
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
