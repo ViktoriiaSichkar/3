@@ -62,9 +62,6 @@ $colors: red, yellow, blue, green;
     }
 }
 
-
-
-
 .box__parent{
     width: 200px;
     display: flex;
@@ -81,7 +78,6 @@ $colors: red, yellow, blue, green;
     width: 100px;
     height: 100px;
     z-index: 1;
- 
 }
 
 @each $color in $colors {
@@ -95,6 +91,7 @@ $colors: red, yellow, blue, green;
     animation-timing-function: linear;
     animation-play-state: running;
     animation-iteration-count: infinite;
+    transition: .5s;
 }
 
 .left-red{
